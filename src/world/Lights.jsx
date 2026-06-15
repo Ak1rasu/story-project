@@ -35,7 +35,7 @@ export default function Lights() {
             color="#ffd6a5"
             
             />
-            <spotLight name="light red 3"
+            <pointLight name="light red 3"
             position={[5.1, 2.5, -4]} 
             intensity={1.5} 
             color="#ffd6a5"

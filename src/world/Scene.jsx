@@ -10,7 +10,7 @@ import CameraLogger from "../ui/CameraLogger";
 export default function Scene({ onPersonClick }) {
   return (
     <Canvas
-      camera={{ position: [7.35, 1.41, 4.48], fov: 40 }}
+      camera={{ position: [7.29, 0.85, 5.8], fov: 40 }}
       gl={{ toneMappingExposure: 0.3 }}
       onCreated={({ scene }) => {
         scene.background = null;
@@ -25,14 +25,16 @@ export default function Scene({ onPersonClick }) {
           <Person
             key={p.id}
             position={p.position}
+            rotation={p.rotation}
             name={p.name}
+            image={p.image}
             onClick={() => onPersonClick(p)}
           />
         ))}
       </Suspense>
 
       <OrbitControls
-        target={[1.64, 0.90, -1.74]}
+        target={[1.9, 1, -2.4]}
         enableDamping
       />
       
